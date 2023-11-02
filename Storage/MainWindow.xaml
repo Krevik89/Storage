@@ -1,0 +1,34 @@
+﻿<Window x:Class="Storage.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Storage"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Canvas>
+        <Ellipse x:Name="ConnectionIndicator" Width="10" Height="10" Fill="Red" Canvas.Left="62" Canvas.Top="15" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Button x:Name="Connect" Content="On" HorizontalAlignment="Left" VerticalAlignment="Top" Width="38" Canvas.Left="10" Canvas.Top="10" Click="Connect_Click"/>
+        <Button x:Name="Disconnect" Content="Off" HorizontalAlignment="Left" VerticalAlignment="Center" Width="38" Canvas.Left="10" Canvas.Top="35" Click="Disconnect_Click"/>
+        <StackPanel Orientation="Vertical" Canvas.Left="10" Canvas.Top="60">
+            <Button x:Name="Show_All_Product"        Content="All product"        Click="Show_All_Products_Click"/>
+            <Button x:Name="Show_All_Type"           Content="All Type"           Click="Show_All_Type_Click"/>
+            <Button x:Name="Show_All_Delivery"       Content="All Delivery"       Click="Show_All_Delivery_Click"/>
+            <Button x:Name="Show_Product_Max_Count"  Content="Product Max Count"  Click="Show_Products_Max_Count_Click"/>
+            <Button x:Name="Show_Product_Min_Count"  Content="Product Min Count"  Click="Show_Products_Min_Count_Click"/>
+            <Button x:Name="Show_Products_Min_Price" Content="Product Min Price"  Click="Show_Products_Min_Price_Click"/>
+            <Button x:Name="Show_Products_Max_Price" Content="Product Max Price"  Click="Show_Products_Max_Price_Click"/>
+        </StackPanel>
+        <StackPanel Orientation="Vertical" Canvas.Left="130" Canvas.Top="60">
+            <Button x:Name="Show_Product_Given_Type"     Content="Show Product Given Type"      Click="Show_Product_Given_Type_Click"/>
+            <Button x:Name="Show_Product_Given_Delivery" Content="Show Product Given Delivery"  Click="Show_Product_Given_Delivery"/>
+            <Button x:Name="Show_Prod_old"               Content="Show Product old"             Click="Show_Prod_old"/>
+            <Button x:Name="Show_Prod_avg_type"          Content="Show Product Avg Type"        Click="Show_Prod_avg_type"/>
+            
+        </StackPanel>
+        <TextBox x:Name="TextBox" HorizontalAlignment="Left" VerticalAlignment="Center" Width="100" Canvas.Left="154" Canvas.Top="20" />
+        <DataGrid x:Name="DataGrid" HorizontalAlignment="Left" VerticalAlignment="Center" Width="482" Canvas.Left="299" Canvas.Top="15" AutoGenerateColumns="True" Height="392" >
+
+        </DataGrid>
+    </Canvas>
+</Window>
